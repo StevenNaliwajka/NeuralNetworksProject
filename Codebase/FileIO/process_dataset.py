@@ -1,4 +1,11 @@
-from Codebase import run_metrics
+import random
+import re
+import shutil
+import zipfile
+
+from PIL import Image
+
+from Codebase.run_metrics import RunMetrics
 
 
 def process_dataset(m: RunMetrics):
@@ -95,6 +102,3 @@ def process_dataset(m: RunMetrics):
     index = resize_and_save(dogs, index, n_test, output / "test" / "dogs")
     print(f"Dataset Populated Succuessfully.")
 
-
-process_dataset(m)
-print("Finished")

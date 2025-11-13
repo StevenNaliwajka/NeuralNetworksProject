@@ -1,4 +1,15 @@
+import random
+
+from PIL import Image
+
 from Codebase import run_metrics
+from Codebase.run_metrics import RunMetrics
+
+import tensorflow as tf
+import numpy as np
+from tensorflow import keras
+from tensorflow.keras import layers, models
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 
 def print_random_images(m: RunMetrics):
@@ -27,7 +38,3 @@ def print_random_images(m: RunMetrics):
     ## Print IDs
     print("Cat image:", cat_path.name)
     print("Dog image:", dog_path.name)
-
-
-print_random_image(m)
-print("Finished")
